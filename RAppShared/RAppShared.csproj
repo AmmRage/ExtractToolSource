@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E98CCB60-1437-4635-89A9-82346B6023F1}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>RAppShared</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Ravioli\AppShared\ArchiveBrowseFilter.cs" />
+    <Compile Include="Ravioli\AppShared\ExtractEventHandler.cs" />
+    <Compile Include="Ravioli\AppShared\ExtractErrorEventHandler.cs" />
+    <Compile Include="Ravioli\AppShared\ExtractEventArgs.cs" />
+    <Compile Include="Ravioli\AppShared\ErrorAction.cs" />
+    <Compile Include="Ravioli\AppShared\ExtractErrorEventArgs.cs" />
+    <Compile Include="Ravioli\AppShared\BaseExtractor.cs" />
+    <Compile Include="Ravioli\AppShared\FileSystemHelper.cs" />
+    <Compile Include="Ravioli\AppShared\PluginMapping.cs" />
+    <Compile Include="Ravioli\AppShared\ArchivePluginMapping.cs" />
+    <Compile Include="Ravioli\AppShared\GameViewerPluginMapping.cs" />
+    <Compile Include="Ravioli\AppShared\FileType.cs" />
+    <Compile Include="Ravioli\AppShared\FileTypeDetector.cs" />
+    <Compile Include="Ravioli\AppShared\PluginMetadata.cs" />
+    <Compile Include="Ravioli\AppShared\PluginMetadataWithCategory.cs" />
+    <Compile Include="Ravioli\AppShared\ImageConverter.cs" />
+    <Compile Include="Ravioli\AppShared\ImagePluginManager.cs" />
+    <Compile Include="Ravioli\AppShared\ImagePluginMapping.cs" />
+    <Compile Include="Ravioli\AppShared\InputFileInfo.cs" />
+    <Compile Include="Ravioli\AppShared\InputFileInfoCache.cs" />
+    <Compile Include="Ravioli\AppShared\FileInfoChecker.cs" />
+    <Compile Include="Ravioli\AppShared\ArchivePluginManager.cs" />
+    <Compile Include="Ravioli\AppShared\PluginManager.cs" />
+    <Compile Include="Ravioli\AppShared\ProgressEventHandler.cs" />
+    <Compile Include="Ravioli\AppShared\ProgressEventArgs.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\ScanArchiveBase.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\ScanArchive.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\GenericDirectory.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\ScanResults.cs" />
+    <Compile Include="Ravioli\AppShared\ScanDefinitions.cs" />
+    <Compile Include="Ravioli\AppShared\ScanPluginManager.cs" />
+    <Compile Include="Ravioli\AppShared\SoundConverter.cs" />
+    <Compile Include="Ravioli\AppShared\SoundPluginManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RArchiveInterface\RArchiveInterface.csproj">
+      <Project>{4c7b49dd-9f0c-45d9-8dee-42cd830e0c51}</Project>
+      <Name>RArchiveInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

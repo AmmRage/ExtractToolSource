@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00F87309-AD02-4D68-86A0-E27B17B7972D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>RScannerCore</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="RArchiveInterface">
+      <HintPath>..\RArchiveInterface\bin\Debug\RArchiveInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="RAppShared">
+      <HintPath>..\RAppShared\bin\Debug\RAppShared.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Ravioli\Scanner\ScanDirectoryEntry.cs" />
+    <Compile Include="Ravioli\Scanner\DirectoryEntryWithUnknowns.cs" />
+    <Compile Include="Ravioli\Scanner\PostProcessing.cs" />
+    <Compile Include="Ravioli\Scanner\FileOperations.cs" />
+    <Compile Include="Ravioli\Scanner\ScanProgressChangedEventHandler.cs" />
+    <Compile Include="Ravioli\Scanner\ScanCompletedEventHandler.cs" />
+    <Compile Include="Ravioli\Scanner\ScanProgressChangedEventArgs.cs" />
+    <Compile Include="Ravioli\Scanner\ScanCompletedEventArgs.cs" />
+    <Compile Include="Ravioli\Scanner\FileScanner.cs" />
+    <Compile Include="Ravioli\Scanner\ScanItemEventHandler.cs" />
+    <Compile Include="Ravioli\Scanner\ScanItemEventArgs.cs" />
+    <Compile Include="Ravioli\Scanner\ScanRange.cs" />
+    <Compile Include="Ravioli\Scanner\ScanResults.cs" />
+    <Compile Include="Ravioli\Scanner\ScanStatistics.cs" />
+    <Compile Include="Ravioli\Scanner\ScanStatisticsItem.cs" />
+    <Compile Include="Ravioli\Scanner\PerceivedTypeStatsItem.cs" />
+  </ItemGroup>
+</Project>

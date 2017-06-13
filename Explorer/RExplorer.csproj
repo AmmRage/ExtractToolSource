@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14ABE866-003A-4822-B20A-FC428D5FAF67}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>RExplorer</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Ravioli\Explorer\ExplorerConfig.cs" />
+    <Compile Include="Ravioli\Explorer\FileListFilters.cs" />
+    <Compile Include="Ravioli\Explorer\frmDisambiguate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ravioli\Explorer\frmOpenGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ravioli\Explorer\frmScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ravioli\Explorer\frmView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ravioli\Explorer\GameListEntry.cs" />
+    <Compile Include="Ravioli\Explorer\IconCache.cs" />
+    <Compile Include="Ravioli\Explorer\SHFILEINFO.cs" />
+    <Compile Include="Ravioli\Explorer\IconSize.cs" />
+    <Compile Include="Ravioli\Explorer\IconHandler.cs" />
+    <Compile Include="Ravioli\Explorer\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ravioli\Explorer\frmExtract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ravioli\Explorer\ActionScope.cs" />
+    <Compile Include="Ravioli\Explorer\ListViewColumnSorter.cs" />
+    <Compile Include="Ravioli\Explorer\ListViewDoubleSorter.cs" />
+    <Compile Include="Ravioli\Explorer\ListViewCaseInsensitiveSorter.cs" />
+    <Compile Include="Ravioli\Explorer\ListViewExtensions.cs" />
+    <Compile Include="Ravioli\Explorer\OpenFileWaitData.cs" />
+    <Compile Include="Ravioli\Explorer\PixelFormatConverter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Ravioli\Explorer\Properties\Resources.cs" />
+    <Compile Include="Ravioli\Explorer\Properties\Settings.cs" />
+    <Compile Include="Ravioli\Explorer\ImageZoomer.cs" />
+    <Compile Include="Ravioli\Explorer\SortCriterionMapCollection.cs" />
+    <Compile Include="Ravioli\Explorer\SortCriterion.cs" />
+    <Compile Include="Ravioli\Explorer\SortCriterionMap.cs" />
+    <Compile Include="Ravioli\Explorer\ThumbnailGenerator.cs" />
+    <Compile Include="System\Windows\Forms\ToolStripFixedKeys.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System\Windows\Forms\ToolStripSpringTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ravioli.Explorer.frmDisambiguate.resources" />
+    <EmbeddedResource Include="Ravioli.Explorer.frmExtract.resources" />
+    <EmbeddedResource Include="Ravioli.Explorer.frmMain.resources" />
+    <EmbeddedResource Include="Ravioli.Explorer.frmOpenGame.resources" />
+    <EmbeddedResource Include="Ravioli.Explorer.frmScan.resources" />
+    <EmbeddedResource Include="Ravioli.Explorer.frmView.resources" />
+    <EmbeddedResource Include="Ravioli.Explorer.Properties.Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RAppSharedForms\RAppSharedForms.csproj">
+      <Project>{52b6dc2d-56c6-4e01-a2b0-abb346f6c54e}</Project>
+      <Name>RAppSharedForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RAppShared\RAppShared.csproj">
+      <Project>{e98ccb60-1437-4635-89a9-82346b6023f1}</Project>
+      <Name>RAppShared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RArchiveInterface\RArchiveInterface.csproj">
+      <Project>{4c7b49dd-9f0c-45d9-8dee-42cd830e0c51}</Project>
+      <Name>RArchiveInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RExtractorCore\RExtractorCore.csproj">
+      <Project>{cc51b4e6-dd91-4204-9bd6-2c9fead60031}</Project>
+      <Name>RExtractorCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RScannerCore\RScannerCore.csproj">
+      <Project>{00f87309-ad02-4d68-86a0-e27b17b7972d}</Project>
+      <Name>RScannerCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

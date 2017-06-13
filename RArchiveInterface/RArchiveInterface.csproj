@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C7B49DD-9F0C-45D9-8DEE-42CD830E0C51}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>RArchiveInterface</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IClassInfo.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IArchive.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IOpenFromStream.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\ArchiveBase.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IFileSystemAbstractor.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IGameViewer.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\AbstractorArchive.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\AbstractorDefinition.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\AbstractorRemoveDefinition.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\SubArchiveAbstractorDefinition.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\AbstractorListMode.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\CasingRule.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\AbstractorDirectoryEntry.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\AbstractorDuplicatesPolicy.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IFileSystemEntry.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IDirectoryInfo.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\ArchiveDirectoryInfo.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IFileInfo.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\ArchiveFileInfo.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\CompressedItemsArchive.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\GenericDirectoryEntry.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\CompressedDirectoryEntry.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\ICompressionInfo.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\CompressedFileInfo.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\GenericArchive.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\GenericCompressedArchive.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\GenericCompressedArchive2.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\GenericDirectoryEntryWithHeader.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IDataWriter.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IExtensionIndependent.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\PercentProgressEventHandler.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\PercentProgressEventArgs.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IExtractProgress.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\ExtractWarningEventHandler.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\ExtractWarningEventArgs.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IExtractWarnings.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IFormatCheck.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IImageLoader.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IImageSaver.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\Scanning\DetectedFile.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\Scanning\FileType.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\Scanning\IFileDetector.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\Scanning\LogEventHandler.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\Scanning\LogEventArgs.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\Scanning\Logger.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\Scanning\PerceivedType.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IPaletteConsumer.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IPaletteProvider.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\IRootDirectory.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\ISoundExport.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\ISoundPlayer.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\ISoundPlayer2.cs" />
+    <Compile Include="Ravioli\ArchiveInterface\SoundExportFormat.cs" />
+  </ItemGroup>
+</Project>

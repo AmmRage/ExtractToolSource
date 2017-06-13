@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CC51B4E6-DD91-4204-9BD6-2C9FEAD60031}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>RExtractorCore</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="RAppShared">
+      <HintPath>..\RAppShared\bin\Debug\RAppShared.dll</HintPath>
+    </Reference>
+    <Reference Include="RArchiveInterface">
+      <HintPath>..\RArchiveInterface\bin\Debug\RArchiveInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="RScannerCore">
+      <HintPath>..\RScannerCore\obj\x86\Debug\RScannerCore.dll</HintPath>
+    </Reference>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Ravioli\Extractor\CommandLineParser.cs" />
+    <Compile Include="Ravioli\Extractor\ExtractJob.cs" />
+    <Compile Include="Ravioli\Extractor\ExtractorParameters.cs" />
+    <Compile Include="Ravioli\Extractor\ExtractorRunner.cs" />
+    <Compile Include="Ravioli\Extractor\JobEventArgs.cs" />
+    <Compile Include="Ravioli\Extractor\JobErrorEventArgs.cs" />
+    <Compile Include="Ravioli\Extractor\JobInfoEventArgs.cs" />
+    <Compile Include="Ravioli\Extractor\JobScanProgressEventArgs.cs" />
+    <Compile Include="Ravioli\Extractor\JobScanCompletedEventArgs.cs" />
+    <Compile Include="Ravioli\Extractor\JobEventHandler.cs" />
+    <Compile Include="Ravioli\Extractor\JobErrorEventHandler.cs" />
+    <Compile Include="Ravioli\Extractor\JobInfoEventHandler.cs" />
+    <Compile Include="Ravioli\Extractor\JobScanProgressEventHandler.cs" />
+    <Compile Include="Ravioli\Extractor\JobScanCompletedEventHandler.cs" />
+    <Compile Include="Ravioli\Extractor\JobQueueCreator.cs" />
+    <Compile Include="Ravioli\Extractor\RootDirectoryEventArgs.cs" />
+    <Compile Include="Ravioli\Extractor\RootDirectoryHandler.cs" />
+  </ItemGroup>
+</Project>
