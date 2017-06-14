@@ -1,5 +1,7 @@
 ﻿// Assembly RScannerCore, Version 2.9.0.0
 
+using System.Reflection;
+
 [assembly: System.Reflection.AssemblyTitle("Ravioli Scanner Core")]
 [assembly: System.Reflection.AssemblyDescription("")]
 [assembly: System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)]
@@ -13,6 +15,7 @@
 [assembly: System.Runtime.CompilerServices.CompilationRelaxations(8)]
 [assembly: System.Runtime.InteropServices.ComVisible(false)]
 [assembly: System.CLSCompliant(true)]
-[assembly: System.Reflection.AssemblyFileVersion("2.9.0.0")]
+[assembly: AssemblyVersion("2.9.0.0")]
+[assembly: AssemblyFileVersion("2.9.0.0")]
 [assembly: System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
 

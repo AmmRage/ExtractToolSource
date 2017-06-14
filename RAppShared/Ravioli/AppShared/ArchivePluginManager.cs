@@ -1,4 +1,6 @@
-﻿namespace Ravioli.AppShared
+﻿using System.Diagnostics;
+
+namespace Ravioli.AppShared
 {
     using Ravioli.ArchiveInterface;
     using System;
@@ -129,28 +131,37 @@
                     {
                         continue;
                     }
+
                     try
                     {
                         assembly = Assembly.ReflectionOnlyLoadFrom(str);
+                        //assembly = Assembly.LoadFile(str);
                     }
                     catch (Exception)
                     {
                         continue;
                     }
+
                     try
                     {
                         exportedTypes = assembly.GetExportedTypes();
+                        //exportedTypes = assembly.GetTypes();
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
+                        Debug.WriteLine("GetExportedTypes: " + Path.GetFileName(str));
+                        //Debug.WriteLine(ex.Message);
                         continue;
                     }
+
                     foreach (Type type4 in exportedTypes)
                     {
                         try
                         {
                             if (!type4.IsAbstract)
                             {
+                                Debug.WriteLine(type4.Name);
+
                                 if (type4.GetInterface(type2.Name) != null)
                                 {
                                     list2.Add(this.ReadGameViewerPluginInfo(type4));
@@ -163,6 +174,7 @@
                         }
                         catch (Exception)
                         {
+                            Debug.WriteLine("Error: " + type4.FullName);
                         }
                     }
                 }

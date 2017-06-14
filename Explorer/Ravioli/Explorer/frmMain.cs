@@ -1360,6 +1360,7 @@
             this.closePending = false;
             this.archivePluginManager = new ArchivePluginManager();
             this.archivePluginManager.EnumeratePlugins();
+
             ArchiveBrowseFilter filter = this.archivePluginManager.CreateBrowseFilter();
             this.openFileDialog.Filter = filter.FilterString;
             this.openFileDialog.FilterIndex = filter.KnownTypesIndex;

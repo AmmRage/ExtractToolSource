@@ -1,5 +1,7 @@
 ﻿// Assembly RAppSharedForms, Version 2.9.0.0
 
+using System.Reflection;
+
 [assembly: System.Reflection.AssemblyCompany("Stefan Mayr")]
 [assembly: System.Reflection.AssemblyProduct("Ravioli Game Tools")]
 [assembly: System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)]
@@ -13,6 +15,7 @@
 [assembly: System.CLSCompliant(true)]
 [assembly: System.Runtime.InteropServices.ComVisible(false)]
 [assembly: System.Runtime.InteropServices.Guid("81eb9e12-a557-4f94-917a-e69d7322bb8d")]
-[assembly: System.Reflection.AssemblyFileVersion("2.9.0.0")]
+[assembly: AssemblyVersion("2.9.0.0")]
+[assembly: AssemblyFileVersion("2.9.0.0")]
 [assembly: System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
 

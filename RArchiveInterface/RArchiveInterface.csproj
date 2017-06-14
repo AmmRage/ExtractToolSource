@@ -2,7 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectType>local</ProjectType>
-    <ProjectVersion>7.10.377</ProjectVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4C7B49DD-9F0C-45D9-8DEE-42CD830E0C51}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -19,6 +18,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -35,7 +35,6 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Global.cs" />
     <Compile Include="Ravioli\ArchiveInterface\IClassInfo.cs" />
     <Compile Include="Ravioli\ArchiveInterface\IArchive.cs" />
     <Compile Include="Ravioli\ArchiveInterface\IOpenFromStream.cs" />

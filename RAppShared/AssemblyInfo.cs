@@ -1,5 +1,7 @@
 ﻿// Assembly RAppShared, Version 2.9.0.0
 
+using System.Reflection;
+
 [assembly: System.Reflection.AssemblyTitle("Shared Application Library")]
 [assembly: System.Reflection.AssemblyDescription("")]
 [assembly: System.Reflection.AssemblyConfiguration("")]
@@ -14,5 +16,6 @@
 [assembly: System.CLSCompliant(true)]
 [assembly: System.Reflection.AssemblyTrademark("")]
 [assembly: System.Runtime.InteropServices.Guid("646d3f5e-09c7-4f54-a63e-afab6595a7b4")]
-[assembly: System.Reflection.AssemblyFileVersion("2.9.0.0")]
+[assembly: AssemblyVersion("2.9.0.0")]
+[assembly: AssemblyFileVersion("2.9.0.0")]
 

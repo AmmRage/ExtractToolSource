@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0126FA5C-1EF1-492C-A831-95A60039ABAD}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>ArchivePlugins</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="RArchiveInterface" />
+    <Reference Include="System.Xml" />
+    <Reference Include="PluginHelpers" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="GeneralSoundPlugins" />
+    <Reference Include="System" />
+    <Reference Include="DdsImagePlugin" />
+    <Reference Include="GeneralArchivePlugins" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\ScanArchiveBase.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\GenericDirectory.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\ScanResults.cs" />
+    <Compile Include="Ravioli\Xbox360Plugins\BnkHelper.cs" />
+    <Compile Include="Ravioli\Xbox360Plugins\BnkReader.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\ABFSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\ASFSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\GfsFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\OvlFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SaintsRow\BnkPcFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\CgrFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SaintsRow\BnkPcFile2.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SaintsRow\SR3FSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SaintsRow\SR3InitFSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SaintsRow\SR4FSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SaintsRow\SR4InitFSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SaintsRow\VppPcSBFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SaintsRow\Str2PcFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SaintsRow\VppPcDirectory.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SaintsRow\VppPcDirectoryEntry.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SaintsRow\VppPcFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SaintsRow\VppPcHeader.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SaintsRow\VppPcReader.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SKGFSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\WtexLoader.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\WtexSecondFormat.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\DltDecompressor.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\GfxLoader.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\HoggFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\ResFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\RgdFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SABsmsFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\DltFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\EM4FSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\BR2FSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\PakFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SANamesFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SAPakFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\PodFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\RsrFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SAFSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SfxPlayer.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SGFSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SS2FSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\STOFSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\TRBigFileDirectoryEntry.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\TRBigFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\AwfFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\BrxFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\EF2FSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\EFFSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\GfxDirectoryEntry.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\GfxFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\ImgFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\ITGFSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\PkgDirectoryListEntry.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\PkgFileListEntry.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\PkgFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\PkgHeader.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SfxFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\SndFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\AudFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\PckFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\PckDirectoryEntry.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\TRFSPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\TRLPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\TRAPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\TRUPlugin.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\WadFile.cs" />
+    <Compile Include="Ravioli\ArchivePlugins\WbmFile.cs" />
+  </ItemGroup>
+</Project>
